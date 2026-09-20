@@ -1,0 +1,28 @@
+# Environment & secrets
+.env
+.env.*
+
+# Runtime storage
+storage/rate_limits/
+storage/cache/
+storage/logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+
+# Backups
+*.bak
+*.old
+*~
+
+# Node (if added later)
+node_modules/
+npm-debug.log*
