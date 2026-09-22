@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Configuration — Emmanuel Asituha Portfolio</title>
+    <!-- Bootstrap 5 (for clean formatting) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            padding: 2rem 0;
+        }
+        .config-header {
+            background: #fff;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border-left: 4px solid #0d6efd;
+        }
+        .config-section {
+            background: #fff;
+            border-radius: 0.75rem;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .config-section h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #0d6efd;
+            border-bottom: 1px solid #e9ecef;
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .config-section h2 i {
+            font-size: 1rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.925rem;
+        }
+        th, td {
+            padding: 0.65rem 0.5rem;
+            text-align: left;
+            border-bottom: 1px solid #f1f3f5;
+            vertical-align: top;
+        }
+        th {
+            color: #6c757d;
+            font-weight: 500;
+            width: 30%;
+            white-space: nowrap;
+        }
+        td {
+            color: #212529;
+        }
+        code {
+            background: #f1f3f5;
+            padding: 0.15rem 0.4rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+            color: #d63384;
+            word-break: break-word;
+        }
+        .badge-soft {
+            display: inline-block;
+            background: #e7f1ff;
+            color: #0d6efd;
+            padding: 0.2rem 0.6rem;
+            border-radius: 2rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffecb5;
+            border-radius: 0.5rem;
+            padding: 1rem 1.25rem;
+            font-size: 0.9rem;
+            color: #664d03;
+            margin-bottom: 2rem;
+        }
+        .note strong {
+            color: #664d03;
+        }
+        .faq-item {
+            background: #f8f9fa;
+            border-radius: 0.5rem;
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .faq-item .q {
+            font-weight: 600;
+            color: #212529;
+            margin-bottom: 0.25rem;
+        }
+        .faq-item .a {
+            color: #495057;
+            font-size: 0.9rem;
+        }
+        .table-responsive {
+            overflow-x: auto;
+        }
+        @media (max-width: 576px) {
+            th { width: 40%; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" style="max-width: 900px;">
+
+    <!-- Header -->
+    <div class="config-header">
+        <h1 class="h3 mb-2">Site Configuration</h1>
+        <p class="text-muted mb-0">
+            <strong>Emmanuel Asituha Portfolio</strong> — Reference sheet<br>
+            <small>This is a static HTML representation of <code>config.php</code>. It is for documentation only.</small>
+        </p>
+    </div>
+
+    <!-- Note -->
+    <div class="note">
+        <strong><i class="bi bi-exclamation-triangle-fill"></i> Important:</strong>
+        This file is not loaded by the PHP application. The live site uses <code>config.php</code> which dynamically
+        determines the <code>base_url</code> based on the server environment. Values below reflect the default/static
+        configuration.
+    </div>
+
+    <!-- Base URL -->
+    <div class="config-section">
+        <h2><i class="bi bi-link-45deg"></i> Base URL</h2>
+        <div class="table-responsive">
+            <table>
+                <tr>
+                    <th>base_url</th>
+                    <td><code>http://localhost/portfolio</code> <span class="badge-soft">auto-detected at runtime</span></td>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                    <td>Used by <code>url()</code> and <code>asset()</code> helpers. Automatically resolves to the correct scheme, host, and subdirectory.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Personal -->
+    <div class="config-section">
+        <h2><i class="bi bi-person-badge"></i> Personal</h2>
+        <div class="table-responsive">
+            <table>
+                <tr><th>name</th><td>Emmanuel Asituha</td></tr>
+                <tr><th>initials</th><td>EA</td></tr>
+                <tr><th>role</th><td>Cybersecurity • Development • IT • Research</td></tr>
+                <tr><th>location</th><td>Kenya</td></tr>
+                <tr><th>available</th><td>Available for professional conversations</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Contact Channels -->
+    <div class="config-section">
+        <h2><i class="bi bi-chat-dots"></i> Contact Channels</h2>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Channel</th>
+                        <th>Value</th>
+                        <th>Link / Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Email</strong><br><small class="text-muted">fa-envelope · fa-solid</small></td>
+                        <td>emmanuelasituha@gmail.com</td>
+                        <td><code>emmanuelasituha@gmail.comc</code><br><small>Best for detailed enquiries</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phone</strong><br><small class="text-muted">fa-phone · fa-solid</small></td>
+                        <td>+254 701 119 9139</td>
+                        <td><code>tel:+254701197139</code><br><small>Mon–Fri, 9:00–17:00 EAT</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>WhatsApp</strong><br><small class="text-muted">fa-whatsapp · fa-brands</small></td>
+                        <td>Chat on WhatsApp</td>
+                        <td><code>https://wa.me/254701197139</code><br><small>Quick questions welcome · external</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>LinkedIn</strong><br><small class="text-muted">fa-linkedin-in · fa-brands</small></td>
+                        <td>in/emmanuel-asituha</td>
+                        <td><code>https://linkedin.com/in/emmanuel-asituha</code><br><small>Professional network · external</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>GitHub</strong><br><small class="text-muted">fa-github · fa-brands</small></td>
+                        <td>@jeastco</td>
+                        <td><code>https://github.com/Jeastco</code><br><small>Code &amp; projects · external</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Credly</strong><br><small class="text-muted">fa-certificate · fa-solid</small></td>
+                        <td>Verified credentials</td>
+                        <td><code>https://www.credly.com/users/emmanuel-asituha1/badges/credly</code><br><small>Badges &amp; certifications · external</small></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Enquiry Subjects -->
+    <div class="config-section">
+        <h2><i class="bi bi-tags"></i> Enquiry Subjects</h2>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Key</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>professional-opportunity</code></td><td>Professional Opportunity</td></tr>
+                    <tr><td><code>cybersecurity</code></td><td>Cybersecurity</td></tr>
+                    <tr><td><code>software-development</code></td><td>Software Development</td></tr>
+                    <tr><td><code>data-ai</code></td><td>Data &amp; AI</td></tr>
+                    <tr><td><code>research</code></td><td>Research Collaboration</td></tr>
+                    <tr><td><code>infrastructure</code></td><td>IT Infrastructure</td></tr>
+                    <tr><td><code>pigmaster</code></td><td>PigMaster</td></tr>
+                    <tr><td><code>sar-sec</code></td><td>SAR-Sec Research</td></tr>
+                    <tr><td><code>other</code></td><td>General Enquiry</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="config-section">
+        <h2><i class="bi bi-question-circle"></i> FAQ</h2>
+        <div class="faq-item">
+            <div class="q">What kinds of opportunities can I contact you about?</div>
+            <div class="a">Professional opportunities, cybersecurity, software development, IT infrastructure, Data &amp; AI, research collaboration and technology projects.</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">Can I contact you about research collaboration?</div>
+            <div class="a">Yes — especially cybersecurity, FANETs, network security, authentication, cryptography and simulation.</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">Can I discuss software-development projects with you?</div>
+            <div class="a">Yes. Web applications, Python, Django, PHP, databases, automation, secure design and AI integration.</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">Can I send confidential information through this form?</div>
+            <div class="a">No. Never submit passwords, private keys, credentials or confidential records through this form.</div>
+        </div>
+    </div>
+
+    <!-- Email Delivery -->
+    <div class="config-section">
+        <h2><i class="bi bi-envelope-paper"></i> Email Delivery</h2>
+        <div class="table-responsive">
+            <table>
+                <tr><th>recipient</th><td><code>emmanuelasituha@gmail.com</code></td></tr>
+                <tr><th>from</th><td><code>emmanuelsecureict@gmail.com</code></td></tr>
+                <tr><th>from_name</th><td>Emmanuel Asituha Portfolio</td></tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

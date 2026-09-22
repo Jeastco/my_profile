@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helper Functions — Emmanuel Asituha Portfolio</title>
+    <!-- Bootstrap 5 (for clean formatting) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            padding: 2rem 0;
+        }
+        .doc-header {
+            background: #fff;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border-left: 4px solid #0d6efd;
+        }
+        .doc-section {
+            background: #fff;
+            border-radius: 0.75rem;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .doc-section h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #0d6efd;
+            border-bottom: 1px solid #e9ecef;
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .doc-section h2 code {
+            background: #e7f1ff;
+            color: #0d6efd;
+            padding: 0.15rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 1rem;
+        }
+        .func-signature {
+            background: #f1f3f5;
+            border-radius: 0.5rem;
+            padding: 0.75rem 1rem;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 0.9rem;
+            color: #d63384;
+            margin-bottom: 1rem;
+            word-break: break-word;
+        }
+        .func-signature .keyword { color: #0d6efd; }
+        .func-signature .type { color: #6f42c1; }
+        .func-signature .param { color: #212529; }
+        .func-signature .return { color: #198754; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.925rem;
+        }
+        th, td {
+            padding: 0.65rem 0.5rem;
+            text-align: left;
+            border-bottom: 1px solid #f1f3f5;
+            vertical-align: top;
+        }
+        th {
+            color: #6c757d;
+            font-weight: 500;
+            width: 35%;
+            white-space: nowrap;
+        }
+        td {
+            color: #212529;
+        }
+        code {
+            background: #f1f3f5;
+            padding: 0.15rem 0.4rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+            color: #d63384;
+            word-break: break-word;
+        }
+        .example-block {
+            background: #f8f9fa;
+            border-left: 3px solid #0d6efd;
+            border-radius: 0.375rem;
+            padding: 0.75rem 1rem;
+            margin: 0.5rem 0 1rem;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 0.875rem;
+        }
+        .example-block .call { color: #0d6efd; }
+        .example-block .result { color: #198754; }
+        .example-block .comment { color: #6c757d; font-style: italic; }
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffecb5;
+            border-radius: 0.5rem;
+            padding: 1rem 1.25rem;
+            font-size: 0.9rem;
+            color: #664d03;
+            margin-bottom: 2rem;
+        }
+        .note strong { color: #664d03; }
+        .badge-soft {
+            display: inline-block;
+            background: #e7f1ff;
+            color: #0d6efd;
+            padding: 0.2rem 0.6rem;
+            border-radius: 2rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" style="max-width: 950px;">
+
+    <!-- Header -->
+    <div class="doc-header">
+        <h1 class="h3 mb-2">Helper Functions</h1>
+        <p class="text-muted mb-0">
+            <strong>Emmanuel Asituha Portfolio</strong> — Reference sheet<br>
+            <small>This is a static HTML representation of <code>functions.php</code>. It is for documentation only.</small>
+        </p>
+    </div>
+
+    <!-- Note -->
+    <div class="note">
+        <strong>⚠️ Important:</strong>
+        This file is not executed by the PHP application. The live site loads <code>functions.php</code> to
+        escape output, build URLs, and generate cache-busted asset links. The examples below show what each
+        function <em>would</em> output given a specific input and a base URL of
+        <code>http://localhost/portfolio</code>.
+    </div>
+
+    <!-- e() -->
+    <div class="doc-section">
+        <h2><code>e()</code> — Escape HTML Output <span class="badge-soft">Security</span></h2>
+
+        <div class="func-signature">
+            <span class="keyword">function</span> <strong>e</strong>(<span class="type">?string</span> <span class="param">$value</span>): <span class="return">string</span>
+        </div>
+
+        <p class="mb-2">
+            Safely escapes a string for HTML output by converting special characters to HTML entities.
+            Prevents XSS (cross-site scripting) attacks when rendering user-supplied or dynamic data.
+        </p>
+
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <td><code>$value</code> — The string to escape. <code>null</code> is treated as an empty string.</td>
+            </tr>
+            <tr>
+                <th>Returns</th>
+                <td>An HTML-safe string encoded with <code>ENT_QUOTES | ENT_SUBSTITUTE</code> in UTF-8.</td>
+            </tr>
+            <tr>
+                <th>Flags used</th>
+                <td>
+                    <code>ENT_QUOTES</code> — escapes both double and single quotes.<br>
+                    <code>ENT_SUBSTITUTE</code> — replaces invalid code sequences with a Unicode replacement character.
+                </td>
+            </tr>
+        </table>
+
+        <div class="example-block">
+            <div class="call">e('Hello &amp; welcome')</div>
+            <div class="result">→ 'Hello &amp;amp; welcome'</div>
+            <br>
+            <div class="call">e('&lt;script&gt;alert(1)&lt;/script&gt;')</div>
+            <div class="result">→ '&amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt;'</div>
+            <br>
+            <div class="call">e('It\'s "quoted"')</div>
+            <div class="result">→ 'It&amp;#039;s &amp;quot;quoted&amp;quot;'</div>
+        </div>
+    </div>
+
+    <!-- url() -->
+    <div class="doc-section">
+        <h2><code>url()</code> — Build Absolute URLs <span class="badge-soft">Navigation</span></h2>
+
+        <div class="func-signature">
+            <span class="keyword">function</span> <strong>url</strong>(<span class="type">string</span> <span class="param">$path</span> = ''): <span class="return">string</span>
+        </div>
+
+        <p class="mb-2">
+            Builds an absolute URL using the site's base URL (stored in <code>$GLOBALS['__site_base_url']</code>).
+            Passes through anchors, empty strings, and fully-qualified URLs unchanged.
+        </p>
+
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <td><code>$path</code> — A relative path (<code>about.php</code>), anchor (<code>#section</code>), or absolute URL.</td>
+            </tr>
+            <tr>
+                <th>Returns</th>
+                <td>A fully-qualified URL rooted at the site's base URL, or the original value for pass-through cases.</td>
+            </tr>
+            <tr>
+                <th>Pass-through rules</th>
+                <td>
+                    • Empty string → returned as-is.<br>
+                    • Starts with <code>#</code> → returned as-is (anchor link).<br>
+                    • Matches <code>http://</code>, <code>https://</code>, or <code>//</code> → returned as-is.
+                </td>
+            </tr>
+        </table>
+
+        <div class="example-block">
+            <div class="comment">// Base URL: http://localhost/portfolio</div>
+            <div class="call">url('about.php')</div>
+            <div class="result">→ 'http://localhost/portfolio/about.php'</div>
+            <br>
+            <div class="call">url('blog/post.php')</div>
+            <div class="result">→ 'http://localhost/portfolio/blog/post.php'</div>
+            <br>
+            <div class="call">url('#section')</div>
+            <div class="result">→ '#section' <span class="comment">// passthrough</span></div>
+            <br>
+            <div class="call">url('https://example.com')</div>
+            <div class="result">→ 'https://example.com' <span class="comment">// passthrough</span></div>
+            <br>
+            <div class="call">url('')</div>
+            <div class="result">→ '' <span class="comment">// passthrough</span></div>
+        </div>
+    </div>
+
+    <!-- asset() -->
+    <div class="doc-section">
+        <h2><code>asset()</code> — Asset URLs with Cache-Busting <span class="badge-soft">Performance</span></h2>
+
+        <div class="func-signature">
+            <span class="keyword">function</span> <strong>asset</strong>(<span class="type">string</span> <span class="param">$path</span>): <span class="return">string</span>
+        </div>
+
+        <p class="mb-2">
+            Returns a public URL for a static asset (CSS, JS, image) and appends a cache-busting query string
+            based on the file's last-modified time. This forces browsers to fetch the latest version whenever
+            the file changes.
+        </p>
+
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <td><code>$path</code> — Relative path to the asset, e.g. <code>assets/css/home.css</code>.</td>
+            </tr>
+            <tr>
+                <th>Returns</th>
+                <td>A full URL via <code>url()</code>, with <code>?v=xxxxxx</code> appended if the file exists on disk.</td>
+            </tr>
+            <tr>
+                <th>Version string</th>
+                <td>The last 6 digits of the file's <code>filemtime()</code> Unix timestamp.</td>
+            </tr>
+        </table>
+
+        <div class="example-block">
+            <div class="comment">// File: /portfolio/assets/css/home.css (last modified 1712345678)</div>
+            <div class="call">asset('assets/css/home.css')</div>
+            <div class="result">→ 'http://localhost/portfolio/assets/css/home.css?v=345678'</div>
+            <br>
+            <div class="comment">// File does not exist on disk</div>
+            <div class="call">asset('assets/img/missing.png')</div>
+            <div class="result">→ 'http://localhost/portfolio/assets/img/missing.png' <span class="comment">// no version</span></div>
+        </div>
+    </div>
+
+    <!-- is_current() -->
+    <div class="doc-section">
+        <h2><code>is_current()</code> — Active Navigation State <span class="badge-soft">UI</span></h2>
+
+        <div class="func-signature">
+            <span class="keyword">function</span> <strong>is_current</strong>(<span class="type">string</span> <span class="param">$slug</span>, <span class="type">string</span> <span class="param">$current</span>): <span class="return">string</span>
+        </div>
+
+        <p class="mb-2">
+            Compares a navigation slug against the current page's slug. Returns <code>'active'</code> if they
+            match, or an empty string otherwise. Typically used to add an <code>active</code> CSS class to the
+            current menu item.
+        </p>
+
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <td><code>$slug</code> — The navigation item's slug (e.g. <code>'about'</code>).</td>
+            </tr>
+            <tr>
+                <th>Parameter</th>
+                <td><code>$current</code> — The current page's slug (e.g. <code>$page['slug']</code>).</td>
+            </tr>
+            <tr>
+                <th>Returns</th>
+                <td><code>'active'</code> if the slugs match, otherwise <code>''</code> (empty string).</td>
+            </tr>
+        </table>
+
+        <div class="example-block">
+            <div class="comment">// Current page slug: 'about'</div>
+            <div class="call">is_current('about', 'about')</div>
+            <div class="result">→ 'active'</div>
+            <br>
+            <div class="call">is_current('projects', 'about')</div>
+            <div class="result">→ ''</div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
