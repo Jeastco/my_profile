@@ -1,0 +1,52 @@
+/* Featured lab */
+.featured-lab { background: #fff; border-radius: 1rem; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,.06); margin-bottom: 3rem; }
+.featured-lab__head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+.featured-lab__badge { color: #0d6efd; font-weight: 600; font-size: .85rem; letter-spacing: .05em; }
+.featured-lab__title { font-size: 1.75rem; margin-bottom: 1.5rem; }
+.featured-lab__title i { color: #0d6efd; margin-right: .5rem; }
+
+/* Difficulty pills */
+.difficulty-pill { padding: .25rem .75rem; border-radius: 2rem; font-size: .75rem; font-weight: 600; letter-spacing: .05em; }
+.difficulty-pill--easy { background: #d1f4e0; color: #0a6c3c; }
+.difficulty-pill--medium { background: #fff3cd; color: #7a5900; }
+.difficulty-pill--info { background: #e7f1ff; color: #084298; }
+
+/* Lab fields */
+.lab-field { margin-bottom: 1.5rem; }
+.lab-field__label { display: block; font-weight: 600; color: #0d6efd; margin-bottom: .75rem; font-size: .9rem; letter-spacing: .02em; }
+.lab-field__label i { margin-right: .35rem; }
+.lab-steps { padding-left: 1.25rem; }
+.lab-steps li { margin-bottom: .5rem; }
+.lesson-list { list-style: none; padding-left: 0; }
+.lesson-list li { position: relative; padding-left: 1.5rem; margin-bottom: .5rem; }
+.lesson-list li::before { content: "✓"; position: absolute; left: 0; color: #0d6efd; font-weight: bold; }
+
+/* Lab terminal */
+.lab-terminal { background: #1e1e1e; border-radius: .75rem; overflow: hidden; font-family: monospace; color: #d4d4d4; }
+.lab-terminal__head { background: #2d2d2d; padding: .5rem 1rem; display: flex; align-items: center; gap: .75rem; color: #ccc; font-size: .85rem; }
+.lab-terminal__body { padding: 1.25rem 1rem; font-size: .85rem; line-height: 1.7; }
+.terminal-indent { padding-left: 1.5rem; }
+.terminal-success { color: #4ade80; }
+
+/* Lab grid */
+.lab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+.lab-card { background: #fff; border-radius: .75rem; padding: 1.5rem; box-shadow: 0 1px 8px rgba(0,0,0,.05); border: 1px solid #eef1f4; transition: transform .2s, box-shadow .2s; }
+.lab-card:hover { transform: translateY(-3px); box-shadow: 0 4px 16px rgba(0,0,0,.1); }
+.lab-card__head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.lab-card__icon { font-size: 1.5rem; color: #0d6efd; }
+.lab-card__type { font-size: .7rem; letter-spacing: .1em; color: #6c757d; font-weight: 600; }
+.lab-card__statement { font-size: .9rem; color: #495057; margin: .75rem 0; }
+.lab-card__meta { display: flex; flex-direction: column; gap: .35rem; font-size: .8rem; color: #6c757d; margin-bottom: 1rem; }
+.lab-card__meta i { margin-right: .35rem; color: #0d6efd; }
+.lab-card h3 { font-size: 1.1rem; margin: .5rem 0; }
+
+/* Lesson cards */
+.lesson-card { background: #fff; border-radius: .75rem; padding: 1.5rem; border: 1px solid #eef1f4; height: 100%; }
+.lesson-card__icon { font-size: 1.75rem; color: #0d6efd; display: block; margin-bottom: 1rem; }
+.lesson-card h3 { font-size: 1.1rem; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+    .lab-grid { grid-template-columns: 1fr; }
+    .featured-lab { padding: 1.25rem; }
+    .featured-lab__title { font-size: 1.35rem; }
+}
