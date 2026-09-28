@@ -370,48 +370,50 @@
 
     <div class="container">
 
-        <!-- Section header with intro stat card -->
+        <!-- Section header -->
 
-        <div class="ds-section__intro">
+        <header class="ds-header">
 
-            <div class="ds-section__intro-text">
+            <div class="ds-header__left">
 
-                <span class="section-label">Data Science Portfolio</span>
+                <span class="section-label">Data Science</span>
 
                 <h2 id="data-science-heading" class="section-title">
                     From raw data to real insight
                 </h2>
 
-                <p class="section-desc">
-                    Three hands-on data science projects that cover the
-                    full analyst workflow — collecting data from the web,
-                    cleaning it into a usable form, and explaining what
-                    the numbers actually say.
+                <p class="ds-header__sub">
+                    Three hands-on projects covering the analyst workflow —
+                    collect, clean, analyse.
                 </p>
 
             </div>
 
 
-            <div class="ds-section__stat" aria-hidden="true">
+            <div class="ds-header__stats" aria-label="Section summary">
 
-                <div class="ds-section__stat-icon">
-                    <i class="fa-solid fa-chart-line"></i>
+                <div class="ds-stat">
+                    <strong>3</strong>
+                    <span>Projects</span>
                 </div>
 
-                <div>
-                    <strong>3</strong>
-                    <span>End-to-end<br>Data Projects</span>
+                <div class="ds-stat">
+                    <strong>4</strong>
+                    <span>Stages</span>
+                </div>
+
+                <div class="ds-stat">
+                    <strong>6</strong>
+                    <span>Tools</span>
                 </div>
 
             </div>
 
-        </div>
+        </header>
 
 
 
-        <!-- =====================================================
-             DATA SCIENCE CARDS
-        ====================================================== -->
+        <!-- Cards -->
 
         <div class="row g-4">
 
@@ -424,103 +426,58 @@
 
                 <article class="ds-card">
 
-                    <!-- Visual header -->
                     <div class="ds-card__visual ds-card__visual--scrape" aria-hidden="true">
 
-                        <span class="ds-card__number">01</span>
+                        <span class="ds-card__badge">01</span>
 
                         <span class="ds-card__icon">
                             <i class="fa-solid fa-spider"></i>
                         </span>
 
-                        <div class="ds-card__visual-dots">
-                            <span></span><span></span><span></span>
-                        </div>
-
                     </div>
 
 
-                    <!-- Body -->
                     <div class="ds-card__body">
 
                         <div class="ds-card__meta">
 
-                            <span class="ds-card__category">Data Collection</span>
+                            <span class="ds-card__eyebrow">Collect</span>
 
                             <span class="ds-card__level ds-card__level--beginner">
-                                <i class="fa-solid fa-circle" aria-hidden="true"></i>
                                 Beginner
                             </span>
 
                         </div>
 
 
-                        <h3>Web Scraping in Google Colab</h3>
-
+                        <h3>Web Scraping in Colab</h3>
 
                         <p class="ds-card__lead">
-                            Pulling real data off the web — no local setup required.
-                        </p>
-
-
-                        <p class="ds-card__text">
-                            Used Google Colab to send HTTP requests to a live
-                            website, parse the HTML structure with BeautifulSoup,
-                            and extract structured records into a tidy DataFrame
-                            for downstream analysis.
+                            Pull real data off the web — no local setup.
                         </p>
 
 
                         <ul class="ds-card__skills">
 
-                            <li>
-                                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                                HTTP requests &amp; status handling
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                                HTML parsing with BeautifulSoup
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                                Structuring extracted data with Pandas
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                                Exporting clean data to CSV
-                            </li>
+                            <li>HTTP requests</li>
+                            <li>BeautifulSoup parsing</li>
+                            <li>Structured DataFrames</li>
+                            <li>CSV export</li>
 
                         </ul>
-
-
-                        <div class="ds-card__tools">
-
-                            <span class="ds-tool">Python</span>
-                            <span class="ds-tool">Colab</span>
-                            <span class="ds-tool">Requests</span>
-                            <span class="ds-tool">BeautifulSoup</span>
-                            <span class="ds-tool">Pandas</span>
-
-                        </div>
 
                     </div>
 
 
-                    <!-- Footer -->
                     <footer class="ds-card__footer">
 
-                        <span class="ds-card__output">
-                            <i class="fa-solid fa-file-csv" aria-hidden="true"></i>
-                            Output: CSV dataset
-                        </span>
+                        <div class="ds-card__tools">
 
-                        <span class="ds-card__link">
-                            View notebook
-                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                        </span>
+                            <span>Python</span>
+                            <span>Colab</span>
+                            <span>Pandas</span>
+
+                        </div>
 
                     </footer>
 
@@ -540,15 +497,11 @@
 
                     <div class="ds-card__visual ds-card__visual--wrangle" aria-hidden="true">
 
-                        <span class="ds-card__number">02</span>
+                        <span class="ds-card__badge">02</span>
 
                         <span class="ds-card__icon">
                             <i class="fa-solid fa-broom"></i>
                         </span>
-
-                        <div class="ds-card__visual-dots">
-                            <span></span><span></span><span></span>
-                        </div>
 
                     </div>
 
@@ -557,10 +510,9 @@
 
                         <div class="ds-card__meta">
 
-                            <span class="ds-card__category">Data Preparation</span>
+                            <span class="ds-card__eyebrow">Clean</span>
 
                             <span class="ds-card__level ds-card__level--intermediate">
-                                <i class="fa-solid fa-circle" aria-hidden="true"></i>
                                 Intermediate
                             </span>
 
@@ -569,69 +521,32 @@
 
                         <h3>Data Wrangling</h3>
 
-
                         <p class="ds-card__lead">
-                            Turning messy raw data into a clean, analysis-ready dataset.
-                        </p>
-
-
-                        <p class="ds-card__text">
-                            Cleaned and reshaped a raw dataset — handling
-                            missing values, fixing inconsistent types,
-                            standardising column formats, removing duplicates
-                            and engineering a few derived features useful for
-                            downstream analysis.
+                            Turn messy raw data into an analysis-ready dataset.
                         </p>
 
 
                         <ul class="ds-card__skills">
 
-                            <li>
-                                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                                Missing-value handling &amp; imputation
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                                Type conversion &amp; normalisation
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                                Duplicate detection &amp; removal
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                                Feature engineering with Pandas
-                            </li>
+                            <li>Missing-value handling</li>
+                            <li>Type conversion</li>
+                            <li>Duplicate removal</li>
+                            <li>Feature engineering</li>
 
                         </ul>
-
-
-                        <div class="ds-card__tools">
-
-                            <span class="ds-tool">Python</span>
-                            <span class="ds-tool">Pandas</span>
-                            <span class="ds-tool">NumPy</span>
-                            <span class="ds-tool">Jupyter</span>
-
-                        </div>
 
                     </div>
 
 
                     <footer class="ds-card__footer">
 
-                        <span class="ds-card__output">
-                            <i class="fa-solid fa-table" aria-hidden="true"></i>
-                            Output: Clean dataset
-                        </span>
+                        <div class="ds-card__tools">
 
-                        <span class="ds-card__link">
-                            View notebook
-                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                        </span>
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>NumPy</span>
+
+                        </div>
 
                     </footer>
 
@@ -642,7 +557,7 @@
 
 
             <!-- =============================================
-                 CARD 03 — Explanatory Data Analysis
+                 CARD 03 — EDA
             ============================================== -->
 
             <div class="col-md-6 col-lg-4 ds-item" data-categories="ai data">
@@ -651,15 +566,11 @@
 
                     <div class="ds-card__visual ds-card__visual--eda" aria-hidden="true">
 
-                        <span class="ds-card__number">03</span>
+                        <span class="ds-card__badge">03</span>
 
                         <span class="ds-card__icon">
                             <i class="fa-solid fa-chart-line"></i>
                         </span>
-
-                        <div class="ds-card__visual-dots">
-                            <span></span><span></span><span></span>
-                        </div>
 
                     </div>
 
@@ -668,10 +579,9 @@
 
                         <div class="ds-card__meta">
 
-                            <span class="ds-card__category">Data Analysis</span>
+                            <span class="ds-card__eyebrow">Analyse</span>
 
                             <span class="ds-card__level ds-card__level--intermediate">
-                                <i class="fa-solid fa-circle" aria-hidden="true"></i>
                                 Intermediate
                             </span>
 
@@ -680,69 +590,32 @@
 
                         <h3>Explanatory Data Analysis</h3>
 
-
                         <p class="ds-card__lead">
-                            Finding the story inside the data — and telling it clearly.
-                        </p>
-
-
-                        <p class="ds-card__text">
-                            Performed exploratory and explanatory analysis:
-                            distribution checks, correlation studies, segment
-                            comparisons and visualisations that highlight the
-                            key patterns decision-makers actually need to see.
+                            Find the story in the numbers — and tell it clearly.
                         </p>
 
 
                         <ul class="ds-card__skills">
 
-                            <li>
-                                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                                Summary statistics &amp; describe()
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                                Distribution &amp; outlier analysis
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                                Correlation &amp; segment comparison
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                                Visual storytelling with plots
-                            </li>
+                            <li>Summary statistics</li>
+                            <li>Distributions &amp; outliers</li>
+                            <li>Correlation analysis</li>
+                            <li>Visual storytelling</li>
 
                         </ul>
-
-
-                        <div class="ds-card__tools">
-
-                            <span class="ds-tool">Python</span>
-                            <span class="ds-tool">Pandas</span>
-                            <span class="ds-tool">Matplotlib</span>
-                            <span class="ds-tool">Seaborn</span>
-                            <span class="ds-tool">Jupyter</span>
-
-                        </div>
 
                     </div>
 
 
                     <footer class="ds-card__footer">
 
-                        <span class="ds-card__output">
-                            <i class="fa-solid fa-image" aria-hidden="true"></i>
-                            Output: Insights &amp; charts
-                        </span>
+                        <div class="ds-card__tools">
 
-                        <span class="ds-card__link">
-                            View notebook
-                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                        </span>
+                            <span>Pandas</span>
+                            <span>Matplotlib</span>
+                            <span>Seaborn</span>
+
+                        </div>
 
                     </footer>
 
@@ -754,110 +627,44 @@
 
 
 
-        <!-- =====================================================
-             WORKFLOW DIAGRAM
-        ====================================================== -->
+        <!-- Workflow strip -->
 
-        <div class="ds-workflow">
+        <div class="ds-flow" aria-label="Data workflow">
 
-            <header class="ds-workflow__head">
+            <div class="ds-flow__step">
+                <span class="ds-flow__dot"></span>
+                <strong>Collect</strong>
+                <small>Scrape or import</small>
+            </div>
 
-                <h3>
-                    <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
-                    End-to-End Data Workflow
-                </h3>
+            <span class="ds-flow__arrow" aria-hidden="true">
+                <i class="fa-solid fa-arrow-right"></i>
+            </span>
 
-                <p>
-                    Each project represents a stage in the modern data analyst pipeline.
-                </p>
+            <div class="ds-flow__step">
+                <span class="ds-flow__dot"></span>
+                <strong>Clean</strong>
+                <small>Wrangle &amp; shape</small>
+            </div>
 
-            </header>
+            <span class="ds-flow__arrow" aria-hidden="true">
+                <i class="fa-solid fa-arrow-right"></i>
+            </span>
 
+            <div class="ds-flow__step">
+                <span class="ds-flow__dot"></span>
+                <strong>Analyse</strong>
+                <small>Explore &amp; visualise</small>
+            </div>
 
-            <div class="ds-flow">
+            <span class="ds-flow__arrow" aria-hidden="true">
+                <i class="fa-solid fa-arrow-right"></i>
+            </span>
 
-                <div class="ds-flow__step">
-
-                    <span class="ds-flow__num">01</span>
-
-                    <span class="ds-flow__icon ds-flow__icon--blue">
-                        <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
-                    </span>
-
-                    <strong>Collect</strong>
-
-                    <small>Scrape or import raw data</small>
-
-                    <span class="ds-flow__tag">Scraping</span>
-
-                </div>
-
-
-                <div class="ds-flow__arrow" aria-hidden="true">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-
-                <div class="ds-flow__step">
-
-                    <span class="ds-flow__num">02</span>
-
-                    <span class="ds-flow__icon ds-flow__icon--indigo">
-                        <i class="fa-solid fa-broom" aria-hidden="true"></i>
-                    </span>
-
-                    <strong>Clean</strong>
-
-                    <small>Wrangle into a tidy dataset</small>
-
-                    <span class="ds-flow__tag">Wrangling</span>
-
-                </div>
-
-
-                <div class="ds-flow__arrow" aria-hidden="true">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-
-                <div class="ds-flow__step">
-
-                    <span class="ds-flow__num">03</span>
-
-                    <span class="ds-flow__icon ds-flow__icon--violet">
-                        <i class="fa-solid fa-chart-column" aria-hidden="true"></i>
-                    </span>
-
-                    <strong>Analyse</strong>
-
-                    <small>Explore, model, visualise</small>
-
-                    <span class="ds-flow__tag">EDA</span>
-
-                </div>
-
-
-                <div class="ds-flow__arrow" aria-hidden="true">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-
-                <div class="ds-flow__step ds-flow__step--highlight">
-
-                    <span class="ds-flow__num">04</span>
-
-                    <span class="ds-flow__icon ds-flow__icon--emerald">
-                        <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
-                    </span>
-
-                    <strong>Communicate</strong>
-
-                    <small>Turn insight into action</small>
-
-                    <span class="ds-flow__tag">Impact</span>
-
-                </div>
-
+            <div class="ds-flow__step ds-flow__step--accent">
+                <span class="ds-flow__dot"></span>
+                <strong>Communicate</strong>
+                <small>Turn insight into action</small>
             </div>
 
         </div>
@@ -865,7 +672,6 @@
     </div>
 
 </section>
-
 <!-- =========================================================
      FEATURED PROJECTS
 ========================================================= -->
