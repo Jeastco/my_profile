@@ -1,5 +1,3 @@
-Here is the fully redeveloped HTML file for your data science projects page. It now includes five project cards, with the new "Classification Models" project linked to your Colab notebook, and an updated workflow strip.
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +9,7 @@ Here is the fully redeveloped HTML file for your data science projects page. It 
 
     <title>Data Science Projects | Emmanuel Asituha</title>
 
-    <meta name="description" content="Data science projects by Emmanuel Asituha — web scraping, data wrangling, explanatory data analysis and classification models. Practical work covering the analyst workflow from raw data to real insight.">
+    <meta name="description" content="Data science projects by Emmanuel Asituha — web scraping, data wrangling, explanatory data analysis, classification models and MLOps. Practical work covering the analyst and ML workflow from raw data to deployed insight.">
 
     <meta name="author" content="Emmanuel Asituha">
 
@@ -26,14 +24,14 @@ Here is the fully redeveloped HTML file for your data science projects page. It 
     <meta property="og:url" content="https://emmanuelasituha.com/projects.html">
     <meta property="og:site_name" content="Emmanuel Asituha">
     <meta property="og:title" content="Data Science Projects | Emmanuel Asituha">
-    <meta property="og:description" content="Practical data science projects — web scraping, data wrangling, explanatory data analysis and classification models.">
+    <meta property="og:description" content="Practical data science projects — web scraping, data wrangling, explanatory data analysis, classification models and MLOps.">
     <meta property="og:image" content="https://emmanuelasituha.com/assets/images/og-default.jpg">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Data Science Projects | Emmanuel Asituha">
-    <meta name="twitter:description" content="Practical data science projects — web scraping, data wrangling, explanatory data analysis and classification models.">
+    <meta name="twitter:description" content="Practical data science projects — web scraping, data wrangling, explanatory data analysis, classification models and MLOps.">
     <meta name="twitter:image" content="https://emmanuelasituha.com/assets/images/og-default.jpg">
 
     <!-- Bootstrap -->
@@ -480,6 +478,10 @@ Here is the fully redeveloped HTML file for your data science projects page. It 
     background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
 }
 
+.ds-scope .ds-card__visual--mlops {
+    background: linear-gradient(135deg, #9d174d 0%, #ec4899 100%);
+}
+
 .ds-scope .ds-card__badge {
     position: absolute;
     top: 0.9rem;
@@ -555,6 +557,11 @@ Here is the fully redeveloped HTML file for your data science projects page. It 
 .ds-scope .ds-card__level--intermediate {
     background: #fef3c7;
     color: #92400e;
+}
+
+.ds-scope .ds-card__level--advanced {
+    background: #fee2e2;
+    color: #b91c1c;
 }
 
 .ds-scope .ds-card h3 {
@@ -659,13 +666,17 @@ Here is the fully redeveloped HTML file for your data science projects page. It 
     text-decoration: underline;
 }
 
+.ds-scope .ds-card__download + .ds-card__download {
+    margin-top: 0.35rem;
+}
+
 
 /* ---------- Workflow ---------- */
 
 .ds-scope .ds-flow {
     margin-top: 3.5rem;
     display: grid;
-    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr auto 1fr;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr auto 1fr auto 1fr;
     align-items: center;
     gap: 0.5rem;
     padding: 1.75rem 2.25rem;
@@ -1036,18 +1047,19 @@ Here is the fully redeveloped HTML file for your data science projects page. It 
 
 
                 <p class="projects-hero__lead">
-                    Five hands-on data science projects covering the full
-                    analyst workflow — collecting data from the web,
+                    Six hands-on data science projects covering the full
+                    analyst and ML workflow — collecting data from the web,
                     cleaning it into a usable form, explaining what the
-                    numbers actually say, and building predictive models.
+                    numbers actually say, building predictive models, and
+                    deploying them to production.
                 </p>
 
 
                 <p class="projects-hero__text">
                     Each project uses Python and either Google Colab or
                     Jupyter, and produces a concrete output: a clean
-                    dataset, a set of visualisations, a dashboard, or a
-                    trained classification model.
+                    dataset, a set of visualisations, a dashboard, a
+                    trained classification model, or a deployed web app.
                 </p>
 
 
@@ -1126,6 +1138,12 @@ Here is the fully redeveloped HTML file for your data science projects page. It 
                             <small>Classify</small>
                         </div>
 
+                        <div class="terminal-project">
+                            <i class="fa-solid fa-rocket"></i>
+                            <span>MLOps &amp; Deployment</span>
+                            <small>Deploy</small>
+                        </div>
+
                         <div class="terminal-line terminal-success">
                             <span class="terminal-prompt">✓</span>
                             <span>Notebooks ready.</span>
@@ -1160,13 +1178,13 @@ Here is the fully redeveloped HTML file for your data science projects page. It 
                 <span class="section-label">Data Science</span>
 
                 <h2 id="data-science-heading" class="section-title">
-                    Five projects, one workflow
+                    Six projects, one workflow
                 </h2>
 
                 <p class="ds-header__sub">
-                    Collect. Clean. Analyse. Visualise. Classify.
+                    Collect. Clean. Analyse. Visualise. Classify. Deploy.
                     Each project covers one stage of the modern data
-                    analyst pipeline.
+                    analyst and ML pipeline.
                 </p>
 
             </div>
@@ -1175,17 +1193,17 @@ Here is the fully redeveloped HTML file for your data science projects page. It 
             <div class="ds-header__stats" aria-label="Section summary">
 
                 <div class="ds-stat">
-                    <strong>5</strong>
+                    <strong>6</strong>
                     <span>Projects</span>
                 </div>
 
                 <div class="ds-stat">
-                    <strong>5</strong>
+                    <strong>6</strong>
                     <span>Stages</span>
                 </div>
 
                 <div class="ds-stat">
-                    <strong>10</strong>
+                    <strong>12</strong>
                     <span>Tools</span>
                 </div>
 
@@ -1551,6 +1569,98 @@ Here is the fully redeveloped HTML file for your data science projects page. It 
 
             </div>
 
+
+            <!-- =============================================
+                 06 — Machine Learning Operations (MLOps)
+            ============================================== -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <article class="ds-card">
+
+                    <div class="ds-card__visual ds-card__visual--mlops" aria-hidden="true">
+
+                        <span class="ds-card__badge">06</span>
+
+                        <span class="ds-card__icon">
+                            <i class="fa-solid fa-rocket"></i>
+                        </span>
+
+                    </div>
+
+
+                    <div class="ds-card__body">
+
+                        <div class="ds-card__meta">
+
+                            <span class="ds-card__eyebrow">Deploy</span>
+
+                            <span class="ds-card__level ds-card__level--advanced">
+                                Advanced
+                            </span>
+
+                        </div>
+
+
+                        <h3>Machine Learning Operations (MLOps)</h3>
+
+                        <p class="ds-card__lead">
+                            Take a trained model from notebook to production —
+                            packaged, versioned and served as an interactive
+                            web app.
+                        </p>
+
+
+                        <ul class="ds-card__skills">
+                            <li>Model serialisation</li>
+                            <li>Joblib / Pickle</li>
+                            <li>Streamlit app</li>
+                            <li>Cloud deployment</li>
+                            <li>Inference pipeline</li>
+                            <li>CI/CD basics</li>
+                        </ul>
+
+
+                        <p class="ds-card__detail">
+                            Built on the California Housing dataset: model
+                            trained in Colab, serialised and deployed on
+                            Streamlit Community Cloud with a live prediction
+                            form.
+                        </p>
+
+                    </div>
+
+
+                    <footer class="ds-card__footer">
+
+                        <div class="ds-card__tools">
+                            <span>Python</span>
+                            <span>Streamlit</span>
+                            <span>Scikit-learn</span>
+                        </div>
+
+                        <a class="ds-card__download"
+                           href="https://colab.research.google.com/drive/1-4Q4gy5dTfT71xtWMsZyhJr8osY-ndrW?usp=sharing"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            Open Colab notebook
+                        </a>
+
+                        <a class="ds-card__download"
+                           href="https://california-housing-model-deployment-ctgscpx66qbbm3bjuanwjo.streamlit.app/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <i class="fa-solid fa-globe"></i>
+                            View live app
+                        </a>
+
+                    </footer>
+
+                </article>
+
+            </div>
+
         </div>
 
 
@@ -1600,10 +1710,20 @@ Here is the fully redeveloped HTML file for your data science projects page. It 
                 <i class="fa-solid fa-arrow-right"></i>
             </span>
 
-            <div class="ds-flow__step ds-flow__step--accent">
+            <div class="ds-flow__step">
                 <span class="ds-flow__dot"></span>
                 <strong>Classify</strong>
                 <small>Model &amp; predict</small>
+            </div>
+
+            <span class="ds-flow__arrow" aria-hidden="true">
+                <i class="fa-solid fa-arrow-right"></i>
+            </span>
+
+            <div class="ds-flow__step ds-flow__step--accent">
+                <span class="ds-flow__dot"></span>
+                <strong>Deploy</strong>
+                <small>Ship &amp; serve</small>
             </div>
 
         </div>
@@ -1814,4 +1934,3 @@ Here is the fully redeveloped HTML file for your data science projects page. It 
 </body>
 
 </html>
-```
